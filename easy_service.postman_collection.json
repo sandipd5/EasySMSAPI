@@ -1,0 +1,247 @@
+{
+	"variables": [],
+	"info": {
+		"name": "easy_service",
+		"_postman_id": "36da19a9-5309-1cdd-68e1-b8f1fb8a841b",
+		"description": "bulk sms api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "roles",
+			"description": "",
+			"item": [
+				{
+					"name": "create role",
+					"request": {
+						"url": "{{url}}/api/role",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDc5MTM5NSwiZXhwIjoxNTQwNzk0OTk1LCJuYmYiOjE1NDA3OTEzOTUsImp0aSI6InIyNmVJSVNJdFFkNkVwUzMiLCJzdWIiOjE3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.5JWY_Yn1YBjv_BbAvZQfkwrwWhrqQKmAX3nH6dJv66M",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "assign role",
+					"request": {
+						"url": "{{url}}/api/assign-role",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sandippoudel99@gail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "permission",
+			"description": "",
+			"item": [
+				{
+					"name": "create permission",
+					"request": {
+						"url": "{{url}}/api/permission",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDc4OTc0OCwiZXhwIjoxNTQwNzkzMzQ4LCJuYmYiOjE1NDA3ODk3NDgsImp0aSI6InFrZzdtN0pEblJXQ2dQNGkiLCJzdWIiOjE2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.cuYsNdd6Rn4aIKhaqUbetp888SBnpxBUYFTFe6Q81yQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"attach-permissions\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "attach permission",
+					"request": {
+						"url": "{{url}}/api/attach-permission",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDc4OTc0OCwiZXhwIjoxNTQwNzkzMzQ4LCJuYmYiOjE1NDA3ODk3NDgsImp0aSI6InFrZzdtN0pEblJXQ2dQNGkiLCJzdWIiOjE2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.cuYsNdd6Rn4aIKhaqUbetp888SBnpxBUYFTFe6Q81yQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role\":\"admin\",\n\t\"permission\":\"attach-permissions\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"url": "{{url}}/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"demo\",\n   \"email\": \"demo@admin.com\",\n   \"password\": \"123456\",\n   \"password_confirmation\": \"123456\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"url": "{{url}}/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"easyse@admin.com\",\n   \"password\": \"123456\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"url": "{{url}}/api/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDc4OTc0OCwiZXhwIjoxNTQwNzkzMzQ4LCJuYmYiOjE1NDA3ODk3NDgsImp0aSI6InFrZzdtN0pEblJXQ2dQNGkiLCJzdWIiOjE2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.cuYsNdd6Rn4aIKhaqUbetp888SBnpxBUYFTFe6Q81yQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"sandippoudel90@gmail.com\",\n   \"password\": \"secret\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"url": "{{url}}/api/token/refresh",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU4MjI2NCwiZXhwIjoxNTQwNTg1ODY0LCJuYmYiOjE1NDA1ODIyNjQsImp0aSI6InVJOURrUUNOVFlCRmJlRGkiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.xR5YpR_qQ2BN1C3opk4UhjHhSWXKMvquOmmNtUyspjU",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"sandippoudel90@gmail.com\",\n   \"password\": \"secret\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"url": "{{url}}/api/logout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU4MjI2NCwiZXhwIjoxNTQwNTg1ODY0LCJuYmYiOjE1NDA1ODIyNjQsImp0aSI6InVJOURrUUNOVFlCRmJlRGkiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.xR5YpR_qQ2BN1C3opk4UhjHhSWXKMvquOmmNtUyspjU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MDU4MjI2NCwiZXhwIjoxNTQwNTg1ODY0LCJuYmYiOjE1NDA1ODIyNjQsImp0aSI6InVJOURrUUNOVFlCRmJlRGkiLCJzdWIiOjE0LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.xR5YpR_qQ2BN1C3opk4UhjHhSWXKMvquOmmNtUyspjU\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
